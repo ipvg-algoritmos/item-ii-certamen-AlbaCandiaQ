@@ -10,3 +10,16 @@
 # 5. Todas las notas deben estar entre 1.0 y 7.0.
 
 # 👇 Aquí comienza tu código
+cantidad_notas = int(input("Cuantas notas ingresará?"))
+notas = []
+for i in range (cantidad_notas) :
+    nota = float(input(f"Ingrese la nota {i +1}: "))
+    notas.append(nota)
+promedio = sum(notas) / len(notas)
+promedio_redondeado = round(promedio, 2)
+print("Notas ingresadas: ", notas)
+print("El promedio es: ", promedio_redondeado)
+if promedio_redondeado >= 4.0:
+    print("Suficiente para aprobar")
+else:
+    print("No suficiente para aprobar")
